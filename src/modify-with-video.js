@@ -31,8 +31,8 @@ const players = [
 ];
 
 const increaseScore = (name) => {
-  for (let i = 0; i <= players.length; i++) {
-    if (players[i].name = name) {
+  for (let i = 0; i < players.length; i++) {
+    if (players[i].name === name) {
       players[i].score += 1;
     }
   }
@@ -62,6 +62,9 @@ const getTopScorer = () => {
   let topPlayer;
 
   for (let i = 0; i < players.length; i++) {
+    if (players[i].score < ``) {
+      topPlayer = null;
+    }
     if (players[i].score > maxScore) {
       maxScore = players[i].score;
       topPlayer = players[i].name;
@@ -75,11 +78,11 @@ const getTopScorer = () => {
 // Testing the functions
 // ============================================
 
-increaseScore('Alex');
-increaseScore('Alex');
-decreaseScore('Jordan');
-console.log(players);
-console.log(getTopScorer());
+// increaseScore('Alex');
+// increaseScore('Alex');
+// decreaseScore('Jordan');
+// console.log(players);
+// console.log(getTopScorer());
 
 resetAllScores();
 console.log(players);
