@@ -78,20 +78,21 @@ const shoutEveryLetterForLoop = (str) => {
 const letterCaseCounts = (str) => {
   let cases = {lowercase: 0, uppercase: 0, neither: 0};
   let lower = /[a-z]/g;
-  let upper = /[A-Z]/g;
+  let upper = /[A-Z]/g; 
   let not = /[a-zA-Z]/g;
    
   for (let i = 0; i < str.length; i++) {
-    if (str[i].match(not)) {
-      cases.neither++;
-    } else if (str[i].match(lower)) {
+    if (str[i].match(lower)) {
       cases.lowercase++;
     } else if (str[i].match(upper)) {
       cases.uppercase++;
+    } else {
+      cases.neither++;
     }
   }
   return cases;
 };
+
 
 //console.log(letterCaseCounts('abCdef 123'));
 // ============================================
