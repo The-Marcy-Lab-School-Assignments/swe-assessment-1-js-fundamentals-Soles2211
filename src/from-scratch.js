@@ -16,13 +16,13 @@
 const petJudger = (petBreed, petName) => {
   if (petBreed === undefined || petName === undefined) {
     console.log(`Missing information. Please provide a valid pet.`);
-  } else if (petBreed === 'dog') {
+  } else if (petBreed === "dog") {
     console.log(`I love dogs! ${petName} is so cute!`);
-  } else if (petBreed === 'cat') {
+  } else if (petBreed === "cat") {
     console.log(`I love cats! ${petName} is so cute!`);
-  } else if (petBreed === 'turtle') {
+  } else if (petBreed === "turtle") {
     console.log(`Who doesn't love a good turtle? ${petName} is the tops.`);
-  } else if (petBreed === 'snake') {
+  } else if (petBreed === "snake") {
     console.log(`Not a fan, please take ${petName} and leave.`);
   } else {
     console.log(`What an...interesting pet.`);
@@ -57,7 +57,7 @@ const shoutEveryLetterForLoop = (str) => {
 
   for (let i = 0; i < str.length; i++) {
     let upper = str[i].toUpperCase() + "!";
-    console.log(upper)
+    console.log(upper);
   }
   //   for (let j = 0; j < lower.length; j++) {
   //     for (let k = 0; k < upper.length; k++){
@@ -76,11 +76,11 @@ const shoutEveryLetterForLoop = (str) => {
 // ============================================
 
 const letterCaseCounts = (str) => {
-  let cases = {lowercase: 0, uppercase: 0, neither: 0};
+  let cases = { lowercase: 0, uppercase: 0, neither: 0 };
   let lower = /[a-z]/g;
-  let upper = /[A-Z]/g; 
+  let upper = /[A-Z]/g;
   let not = /[a-zA-Z]/g;
-   
+
   for (let i = 0; i < str.length; i++) {
     if (str[i].match(lower)) {
       cases.lowercase++;
@@ -93,7 +93,6 @@ const letterCaseCounts = (str) => {
   return cases;
 };
 
-
 //console.log(letterCaseCounts('abCdef 123'));
 // ============================================
 // Question 5: getNamesOfGreedyGnomes
@@ -104,35 +103,35 @@ const getNamesOfGreedyGnomes = (gnomes) => {
   for (let gnome in gnomes) {
     if (gnomes[gnome].stolenDecorations.length > 1) {
       greedy.push(gnomes[gnome].name);
-    } 
+    }
   }
   return greedy;
 };
 
 let gnomes = [
   {
-    name: 'Garbeldel',
+    name: "Garbeldel",
     gardenCount: 0,
     age: 407,
-    stolenDecorations: ['chair', 'fountain', 'statue'],
+    stolenDecorations: ["chair", "fountain", "statue"],
   },
   {
-    name: 'Farbus',
+    name: "Farbus",
     gardenCount: 3,
     age: 281,
-    stolenDecorations: ['greek statue'],
+    stolenDecorations: ["greek statue"],
   },
   {
-    name: 'Peekle',
+    name: "Peekle",
     gardenCount: 3,
     age: 101,
     stolenDecorations: [],
   },
   {
-    name: 'Jorbles',
+    name: "Jorbles",
     gardenCount: 3,
     age: 900,
-    stolenDecorations: ['wind chimes', 'mini golfer'],
+    stolenDecorations: ["wind chimes", "mini golfer"],
   },
 ];
 //console.log(getNamesOfGreedyGnomes(gnomes));
@@ -149,12 +148,12 @@ module.exports = {
   getNamesOfGreedyGnomes,
 };
 
-const theHustler = 'Laisha';
+const theHustler = "Laisha";
 
 const shoutOut = () => {
-  const theHustler = 'Paul';
+  const theHustler = "Paul";
   console.log(`${theHustler} is the hardest working person in the room.`);
-}
+};
 
 shoutOut();
 console.log(`${theHustler} is also the hardest working person in the room.`);

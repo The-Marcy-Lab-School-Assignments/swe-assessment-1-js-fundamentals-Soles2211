@@ -12,15 +12,15 @@
 // This function should print and return a message based on temperature
 
 const fixVariables = (temp) => {
-  let msg = ""
+  let msg = "";
   if (temp < 30) {
-    msg = 'Pretty chilly.';
+    msg = "Pretty chilly.";
   } else if (temp < 70) {
-    msg = 'Not bad.';
+    msg = "Not bad.";
   } else if (temp < 100) {
-    msg = 'On the hot side.';
+    msg = "On the hot side.";
   } else {
-    msg = 'I will die of heat.';
+    msg = "I will die of heat.";
   }
   console.log(msg);
   console.log("And that's how I feel about the temp!");
@@ -71,12 +71,12 @@ module.exports = {
 };
 
 const players = [
-  { name: 'Taylor', score: 0 },
-  { name: 'Jordan', score: 0 },
-  { name: 'Alex', score: 0 },
-  { name: 'Morgan', score: 0 },
+  { name: "Taylor", score: 0 },
+  { name: "Jordan", score: 0 },
+  { name: "Alex", score: 0 },
+  { name: "Morgan", score: 0 },
 ];
 
 for (let i in players) {
-console.log(players[i].name);
+  console.log(players[i].name);
 }

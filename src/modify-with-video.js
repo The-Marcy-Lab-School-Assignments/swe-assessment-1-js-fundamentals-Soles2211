@@ -24,10 +24,10 @@
 */
 
 const players = [
-  { name: 'Taylor', score: 0 },
-  { name: 'Jordan', score: 0 },
-  { name: 'Alex', score: 0 },
-  { name: 'Morgan', score: 0 },
+  { name: "Taylor", score: 0 },
+  { name: "Jordan", score: 0 },
+  { name: "Alex", score: 0 },
+  { name: "Morgan", score: 0 },
 ];
 
 const increaseScore = (name) => {
@@ -36,7 +36,7 @@ const increaseScore = (name) => {
       players[i].score += 1;
     }
   }
-}
+};
 
 const decreaseScore = (name) => {
   for (let i = 0; i < players.length; i++) {
@@ -44,18 +44,18 @@ const decreaseScore = (name) => {
       players[i].score -= 1;
     }
   }
-}
+};
 
 const resetAllScores = () => {
   for (let i = 0; i < players.length; i++) {
     let player = players[i];
     resetSingleScore(player);
   }
-}
+};
 
 const resetSingleScore = (player) => {
   score = 0;
-}
+};
 
 const getTopScorer = () => {
   let maxScore = -Infinity;
@@ -72,7 +72,7 @@ const getTopScorer = () => {
   }
 
   return topPlayer;
-}
+};
 
 // ============================================
 // Testing the functions
